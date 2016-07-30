@@ -2,7 +2,7 @@ package com.palvair.sort;
 
 import java.util.Arrays;
 
-public class InsertionSort {
+public class SelectionSort {
 	
 	public static void main(String[] args) {
 		int[] tab = {101,115,30,63,47,20};
