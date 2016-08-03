@@ -26,13 +26,14 @@ public class QuickSort {
 		int valeurPivot = t[début];
 	    int gauche = début+1;
 	    int droite = fin;
-	    //pas de chevauchement
+	    //on s'arrête quand gauche = droite donc quand il y a chevauchement
 	    while (gauche < droite) {
 	    	//positionne les éléments inférieurs au pivot à gauche et les éléments supérieurs au pivot à droite
 	        while(gauche < droite && t[droite] >= valeurPivot) droite--;
 	        while(gauche < droite && t[gauche] <= valeurPivot) gauche++;
 
 	        //permutation
+	        //ça ne sert à rien de permuter si gauche et droite pointe vers le même élément
 	        if(gauche != droite) {
 	        	t = permut(t, gauche, droite);
 	        }
